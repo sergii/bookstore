@@ -3,4 +3,5 @@
   <td><%= book.isbn %></td>
   <td><%= book.published_at.strftime('%B %Y') %></td>
   <td><%= number_to_currency(book.price) %></td>
+  <td><%= link_to 'Delete', [:admin, book], method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
