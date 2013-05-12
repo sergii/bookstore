@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 feature 'Admin views books' do
+  background do
+    page.driver.browser.authorize Settings.admin_name, Settings.admin_password
+  end
+
   scenario 'Books are missing' do
     visit '/admin'
     page.should have_text 'There are no books. Please add one.'

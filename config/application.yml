@@ -1,0 +1,9 @@
+defaults: &defaults
+  admin_name: sergii
+  admin_password: '1111'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
