@@ -1,0 +1,12 @@
+<h1>Books</h1>
+
+<table>
+  <th>
+    <td>Title</td>
+    <td>ISBN</td>
+    <td>Published</td>
+    <td>Price</td>
+  </th>
+
+  <%= render(@books) || 'There are no books. Please add one.' %>
+</table>
