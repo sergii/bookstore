@@ -11,12 +11,7 @@ feature 'Admin views books' do
   end
 
   scenario 'Books are present' do
-    Book.create do |book|
-      book.title = 'Agile Web Development with Rails'
-      book.isbn = 1934356549
-      book.published_at = Date.new 2011, 3
-      book.price = 43.95
-    end
+    create :book
 
     visit '/admin'
 
